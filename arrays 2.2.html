@@ -1,0 +1,114 @@
+<doctype html>
+<head>
+<title>
+	arrays 2.2
+</title>
+</head>
+<body>
+<h1>FULL ARRAY TUTORIAL</h1>
+<H1 id="emo"></H1>
+<p id="demo"></p>
+<H1 id="emo1"></H1>
+<p id="demo1"></p>
+<H1 id="emo2"></H1>
+<p id="demo2"></p>
+<H1 id="emo3"></H1>
+<p id="demo3"></p>
+<H1 id="emo4"></H1>
+<p id="demo4"></p>
+<H1 id="emo5"></H1>
+<p id="demo5"></p>
+<H1 id="emo6"></H1>
+<p id="demo6"></p>
+<H1 id="emo7"></H1>
+<p id="demo7"></p>
+<H1 id="emo8"></H1>
+<p id="demo8"></p>
+<H1 id="emo9"></H1>
+<p id="demo9"></p>
+<H1 id="emo10"></H1>
+<p id="demo10"></p>
+<H1 id="emo11"></H1>
+<p id="demo11"></p>
+<H1 id="emo12"></H1>
+<p id="demo12"></p>
+<H1 id="emo13"></H1>
+<p id="demo13"></p>
+<H1 id="emo14"></H1>
+<p id="demo14"></p>
+<script>
+//simple arrays 
+	const cars=["volvo"," BMW", " suzuki"];
+//calling using document...method	
+	document.getElementById("emo").innerHTML="SIMPLE ARRAY";
+	document.getElementById("demo").innerHTML=cars;
+//index calling	
+	document.getElementById("emo1").innerHTML="INDEX CALLING";
+	document.getElementById("demo1").innerHTML=cars[0]+ " "+cars[1] +" are the best in segment";
+//replacing 1st element 	
+	cars[0]="opel";
+	document.getElementById("emo2").innerHTML="REPLACING 1ST ELEMENT";
+	document.getElementById("demo2").innerHTML=cars;
+//toString function	
+	document.getElementById("emo3").innerHTML="toString FUNCTION";
+	document.getElementById("demo3").innerHTML=cars.toString();
+//join function	
+	cars[0]="Audi";
+	document.getElementById("emo4").innerHTML="JOIN FUNCTION";
+	document.getElementById("demo4").innerHTML=cars.join(" * ");//join through any thing like +,*...etc.
+//pop removes last element	
+	cars.pop();
+	document.getElementById("emo5").innerHTML="POP FUNC. REMOVES LAST ELEMENT";
+	document.getElementById("demo5").innerHTML=cars;
+//push replace last element	
+	cars.push(" Mercedes");
+	document.getElementById("emo6").innerHTML="PUSH REPLACE LAST ELEMENT";
+	document.getElementById("demo6").innerHTML=cars;
+	//document.getElementById("demo6").innerHTML="the first car maker name is "+cars[0];
+//shift function
+	document.getElementById("emo7").innerHTML="SHIFT FUNCTION(BEFORE USING SHIFT FUNCTION)";
+	
+	document.getElementById("demo7").innerHTML=cars;
+	cars.shift();
+//array print from 1st index
+	document.getElementById("emo8").innerHTML="ARRAY PRINT FROM 1ST INDEX USING SHIFT FUNC";	
+	document.getElementById("demo8").innerHTML=cars;
+//unshift function add new element to begnning of array
+	cars.unshift("hyundai");
+	document.getElementById("emo9").innerHTML="UNSHIFT FUNC. ADD NEW ELEMENT IN BEGGINING OF FUNC.";
+	document.getElementById("demo9").innerHTML=cars;
+//LENGTH FUNCTION	
+	document.getElementById("emo10").innerHTML="LENGTH PROVIDE AN EASY WAY TO APPEND NEW"+"<BR>"+" ELEMENT AT LAST OF ARRAY (instead of using push)";
+	cars[cars.length]="honda";
+	document.getElementById("demo10").innerHTML=cars;
+//delete function
+	document.getElementById("emo11").innerHTML="DELETE BY GIVING INDEXING";
+	delete cars[1];
+	document.getElementById("demo11").innerHTML=cars;
+//document.getElementById("demo11").innerHTML=cars[1];(IT WILL GIVE UNDEFINED)
+
+//concatination of functions
+	document.getElementById("emo12").innerHTML="CONCATINATION OF FUNCTION";
+	const boys=["kamal","dev"]
+	const girls=["anchal","sanjana"]
+	const con=boys.concat(girls);
+	document.getElementById("demo12").innerHTML=con;
+//splice function
+		document.getElementById("emo13").innerHTML="SPLICE FUNCTION"+"<br>"+"1st parameter defines positon where to add new element"
+		+"<br>"+"2nd parameter defines how many elements should be removed"+"<br>"+"rest defines the new element to be added";
+		const fruits=["banana", "apple", "kiwi", "orange"]
+		
+		fruits.splice(2,1,"pomegrenate","mango");//at or from position 2,remove 2
+		document.getElementById("demo13").innerHTML=fruits;
+//froEach function
+	document.getElementById("emo14").innerHTML="forEach FUNCTION ";
+	const func=[23,34,45,56];
+	let txt="";
+	func.forEach(myFunc);
+	document.getElementById("demo14").innerHTML=txt;
+	function myFunc(value,index,array){
+	txt +=value+"<br>";
+	}
+</script>
+</body>
+</html>
